@@ -11,7 +11,7 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.FindGameObjectWithTag("player").transform;
+        target = GameObject.FindWithTag("player").transform;
     }
 
     public void SeguirOPlayer()

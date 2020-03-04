@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FaceCamera.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\CameraShakeSimpleScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemController.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemControllerEditor.cs" />
@@ -71,7 +70,6 @@
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\ProjectileMoveScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\RotateToMouseScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\SpawnProjectilesScript.cs" />
-    <Compile Include="Assets\ResetScene.cs" />
     <Compile Include="Assets\Scripts\AtaqueBasico.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BarraDeVida.cs" />
@@ -81,6 +79,7 @@
     <Compile Include="Assets\Scripts\ControleJogador.cs" />
     <Compile Include="Assets\Scripts\CoolDown.cs" />
     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+    <Compile Include="Assets\Scripts\FaceCamera.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\Flecha.cs" />
     <Compile Include="Assets\Scripts\InimigoDano.cs" />
@@ -93,16 +92,17 @@
     <Compile Include="Assets\Scripts\Pooling.cs" />
     <Compile Include="Assets\Scripts\Raio.cs" />
     <Compile Include="Assets\Scripts\Raizes.cs" />
+    <Compile Include="Assets\Scripts\ResetScene.cs" />
     <Compile Include="Assets\Scripts\Snared.cs" />
     <Compile Include="Assets\Scripts\Som.cs" />
     <Compile Include="Assets\Scripts\Tank.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Compile Include="Assets\Scripts\TomaDano.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\VaiPraFrente.cs" />
     <Compile Include="Assets\Scripts\VidaManaPlayer.cs" />
     <Compile Include="Assets\Scripts\WaveCount.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
-    <Compile Include="Assets\UIManager.cs" />
-    <Compile Include="Assets\VaiPraFrente.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Readme.txt" />
@@ -129,37 +129,37 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Merlin-s-Challenge-Alpha-Version/Magic-Wave-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/GITHUBS/Merlin-Challenge-Alpha/Magic-Wave-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

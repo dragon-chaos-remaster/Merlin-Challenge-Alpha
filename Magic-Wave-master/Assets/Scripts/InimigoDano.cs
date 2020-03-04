@@ -29,6 +29,10 @@ public class InimigoDano : MonoBehaviour
         snare.Desnare(duracaoSnare);
     }
 
+    private void OnDisable()
+    {
+        dano.vida = 30;
+    }
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)

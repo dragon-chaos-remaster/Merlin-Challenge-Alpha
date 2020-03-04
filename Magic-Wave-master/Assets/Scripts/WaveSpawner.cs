@@ -15,9 +15,14 @@ public class WaveSpawner : MonoBehaviour
     bool zaWarudo = true;
     //KONO DIO DA
 
+    //public bool apenasAtiradores;
+    //public bool apenasMelees;
+
     [System.Serializable]
     public class Wave
     {
+        public bool apenasAtiradores;
+        public bool apenasMelees;
         public string nome;
         public Transform[] inimigo;
         public int quantidade;
@@ -29,7 +34,9 @@ public class WaveSpawner : MonoBehaviour
     public Transform[] spawnPoints;
 
     public TextMeshProUGUI[] contagemRegressiva;
+
     
+
     int waveCountPointer;
     private int proximaWave = 0;
     bool spawnEnemies;
@@ -61,7 +68,7 @@ public class WaveSpawner : MonoBehaviour
                 WaveCount.Instance.numeroDaWave++;
                 contagemRegressiva[0].gameObject.SetActive(true);
                 contagemRegressiva[1].gameObject.SetActive(true);
-                print("Wave Completa");
+                //print("Wave Completa");
                 //zaWarudo = true;
                 return;
                 //Começa um novo round
@@ -145,13 +152,31 @@ public class WaveSpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        GameObject enemy = pooledObjects[Random.Range(0, pooledObjects.Length)].GetPooledObject();
+        if (waves[proximaWave].apenasAtiradores)
+        {
+            GameObject aux = pooledObjects[0].GetPooledObject();
+            SetEnemyToSpawn(aux);
+        }
+        else if (waves[proximaWave].apenasMelees)
+        {
+            GameObject aux = pooledObjects[1].GetPooledObject();
+            SetEnemyToSpawn(aux);
+        }
+        else
+        {
+            GameObject aux = pooledObjects[Random.Range(0, pooledObjects.Length)].GetPooledObject();
+            SetEnemyToSpawn(aux);
+        }
         
+        
+    }
+    public void SetEnemyToSpawn(GameObject enemy)
+    {
         if (enemy != null)
         {
-            print("Entro");
-           
-            Transform randomPos = spawnPoints[Random.Range(0,spawnPoints.Length)];
+            //print("Entro");
+
+            Transform randomPos = spawnPoints[Random.Range(0, spawnPoints.Length)];
             enemy.SetActive(true);
             enemy.transform.position = randomPos.position;
             //SetEnemyToSpawn();
@@ -159,10 +184,6 @@ public class WaveSpawner : MonoBehaviour
 
             //enemy.transform.rotation = randomPos.rotation;
         }
-    }
-    public void SetEnemyToSpawn()
-    {
-        Vector3 randomPos = new Vector3(Random.Range(3, 13), 0, Random.Range(-4, -15));
 
 
     }

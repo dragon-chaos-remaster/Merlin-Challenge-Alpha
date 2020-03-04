@@ -35,7 +35,7 @@ public class Caveira : MonoBehaviour
     {
         
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.FindGameObjectWithTag("player").transform;
+        target = GameObject.FindWithTag("player").transform;
         dano = GetComponent<TomaDano>();
         snare = GetComponent<Snared>();
     }

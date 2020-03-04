@@ -45,7 +45,7 @@ public class VidaManaPlayer : MonoBehaviour
         }
         if (other.tag == ("pedregulho") && (CompareTag("player")))
         {
-            vida -= 25;
+            vida -= 10;
            
         }
 
