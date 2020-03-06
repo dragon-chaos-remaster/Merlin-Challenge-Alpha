@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7273899912873795593}
   - component: {fileID: 7359805473984912107}
   - component: {fileID: 7361077072960034975}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4786,7 +4786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7272642181954661937}
   - component: {fileID: 7328884206507766005}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4926,7 +4926,7 @@ GameObject:
   - component: {fileID: 7278849494435584669}
   - component: {fileID: 1825364680457853595}
   - component: {fileID: 6766854217543642162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BolaDeFogo
   m_TagString: bolaFogo
   m_Icon: {fileID: 0}
@@ -5017,7 +5017,7 @@ GameObject:
   - component: {fileID: 7273882754217197035}
   - component: {fileID: 7359160859036528733}
   - component: {fileID: 7359423677189353745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BeamFlare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9793,7 +9793,7 @@ GameObject:
   - component: {fileID: 7274115677486261741}
   - component: {fileID: 7359801395484231981}
   - component: {fileID: 7360627739628085385}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SmokeDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14547,7 +14547,7 @@ GameObject:
   - component: {fileID: 7272413612512789073}
   - component: {fileID: 7360902376765312961}
   - component: {fileID: 7359669638360525127}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BallFireOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19375,7 +19375,7 @@ GameObject:
   - component: {fileID: 7272204446936084843}
   - component: {fileID: 7359900981071560707}
   - component: {fileID: 7359436740705768563}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BallFireIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24196,7 +24196,7 @@ GameObject:
   - component: {fileID: 7273971595683126421}
   - component: {fileID: 7358909351146332677}
   - component: {fileID: 7360813677332046123}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28950,7 +28950,7 @@ GameObject:
   - component: {fileID: 7274418085682829443}
   - component: {fileID: 7359006879746763549}
   - component: {fileID: 7360288297855661661}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}

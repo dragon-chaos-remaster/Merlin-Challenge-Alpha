@@ -14531,7 +14531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flecha: {fileID: 409021763784741808}
-  velocidadeProjetil: 2000
+  velocidadeProjetil: 2500
   tempoDestruicao: 6
   hitFlecha: {fileID: 1735349400919506, guid: cd745a28eec886b4b8a86ded5bcd05fd, type: 3}
   ondeNasce: {fileID: 409021763784741808}

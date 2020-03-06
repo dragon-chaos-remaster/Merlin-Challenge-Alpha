@@ -138,13 +138,13 @@ public class Magia : MonoBehaviour
 
     }
 
-    
+
 
     void Atacando()
     {
-        if ((Input.GetMouseButtonDown(0)) && (!EventSystem.current.IsPointerOverGameObject()))
+        if ((Input.GetKeyDown(KeyCode.Alpha1)) && (!EventSystem.current.IsPointerOverGameObject()))
         {
-            print("pei");
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (bolaFogo) && (updatedMana >= custoManaFogo) && (coolDown.podeAtacarFogo))
             {
@@ -154,6 +154,11 @@ public class Magia : MonoBehaviour
                 coolDown.podeAtacarFogo = false;
                 coolDown.waitFireRateFogo = 1;
             }
+        }
+        if ((Input.GetKeyDown(KeyCode.Alpha2)) && (!EventSystem.current.IsPointerOverGameObject()))
+        {
+            print("pei");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (raio) && (updatedMana >= custoManaRaio) && (coolDown.podeAtacarRaio))
             {
                 GameObject aux = Instantiate(choque, choquePoint.position, choquePoint.rotation);
@@ -161,6 +166,11 @@ public class Magia : MonoBehaviour
                 coolDown.podeAtacarRaio = false;
                 coolDown.waitFireRateRaio = 1;
             }
+        }
+        if ((Input.GetKeyDown(KeyCode.Alpha3)) && (!EventSystem.current.IsPointerOverGameObject()))
+        {
+            print("pei");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (seiLa) && (updatedMana >= custoManaNaoSei) && (coolDown.podeAtacarSnare))
             {
                 Transform aux = Instantiate(raizes, raizesPoint.position, raizesPoint.rotation);
@@ -169,11 +179,11 @@ public class Magia : MonoBehaviour
                 coolDown.waitFireRateSnare = 1;
             }
 
-            Debug.DrawRay(ray.origin, new Vector3(hit.point.x, 20, hit.point.z), Color.magenta);
+
 
 
         }
-        if ((Input.GetMouseButtonDown(1)) && (!EventSystem.current.IsPointerOverGameObject()))
+        if ((Input.GetMouseButtonDown(0)) && (!EventSystem.current.IsPointerOverGameObject()))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (podeAtacar))

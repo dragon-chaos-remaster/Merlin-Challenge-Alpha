@@ -7,7 +7,7 @@ using TMPro;
 public class WaveCount : MonoBehaviour
 {
     public TextMeshProUGUI waveCounter;
-    public TextMeshProUGUI waveClear;
+    public Image waveClear;
 
     public int numeroDaWave;
     public int numeroDeWaves;
@@ -56,10 +56,10 @@ public class WaveCount : MonoBehaviour
     }
     IEnumerator WaveCleared(string frase)
     {
-        waveClear.text = "";
+        //waveClear.set = "";
         foreach (char letra in frase.ToCharArray())
         {
-            waveClear.text += letra;
+            //waveClear.text += letra;
             yield return null;
         }
         yield break;
