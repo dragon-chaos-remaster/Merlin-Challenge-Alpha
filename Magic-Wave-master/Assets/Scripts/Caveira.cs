@@ -26,6 +26,7 @@ public class Caveira : MonoBehaviour
 
     TomaDano dano;
 
+    public Pause pause;
     
 
     Snared snare;
@@ -35,7 +36,10 @@ public class Caveira : MonoBehaviour
     {
         
         agent = GetComponent<NavMeshAgent>();
+
+        
         target = GameObject.FindWithTag("player").transform;
+        
         dano = GetComponent<TomaDano>();
         snare = GetComponent<Snared>();
     }
@@ -48,7 +52,7 @@ public class Caveira : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
+        if (target == null || pause.pausado)
         {
             return;
         }

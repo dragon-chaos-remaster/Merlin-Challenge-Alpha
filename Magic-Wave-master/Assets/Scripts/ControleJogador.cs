@@ -16,6 +16,7 @@ public class ControleJogador : MonoBehaviour
     void Start()
     {
         fisica = GetComponent<Rigidbody>();
+        Cursor.visible = false;
 
     }
 

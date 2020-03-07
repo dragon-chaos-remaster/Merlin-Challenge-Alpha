@@ -11,6 +11,7 @@ public class WaveSpawner : MonoBehaviour
 
     public TimeManager tempo;
 
+    public Pause pauses;
     //Referência ao Golpe do vilão DIO BRANDO, de Jojo's Bizarre Adventures: Stardust Crusaders, onde ele para o Tempo 
     bool zaWarudo = true;
     //KONO DIO DA
@@ -58,6 +59,11 @@ public class WaveSpawner : MonoBehaviour
     }
     void Update()
     {
+        if (pauses.pausado)
+        {
+            return;
+        }
+        
         if (estado == SpawnState.ESPERANDO)
         {
             //Checar se os inimigos ainda estão vivos

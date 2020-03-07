@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuToGame : MonoBehaviour
 {
+
     
     // Start is called before the first frame update
     public void Tran_SITION(int index)

@@ -12,10 +12,14 @@ public class MouseAim : MonoBehaviour
         Ray mousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
         
         transform.position = mousePos.GetPoint(100);
-        if (Physics.Raycast(mousePos, 100))
+        if (Physics.Raycast(mousePos, 1000))
         {
             transform.position = mousePos.GetPoint(terreno.position.magnitude);
             transform.localScale = escala;
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
         }
     }
 }

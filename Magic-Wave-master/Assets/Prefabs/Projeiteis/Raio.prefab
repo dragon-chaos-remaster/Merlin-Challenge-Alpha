@@ -19550,7 +19550,7 @@ MonoBehaviour:
   ondeNasce: {fileID: 4983590539943298}
   raio: {fileID: 4983590539943298}
   velocidadeProjetil: 3000
-  limiteDeRicochete: 2
+  limiteDeRicochete: 4
 --- !u!136 &6619949541261265824
 CapsuleCollider:
   m_ObjectHideFlags: 0
