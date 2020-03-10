@@ -24,9 +24,9 @@ public class Caveira : MonoBehaviour
     public int dAtaqueBasico;
     public int dFogoArea;
 
-    TomaDano dano;
+    [SerializeField] TomaDano dano;
 
-    public Pause pause;
+    [SerializeField] Pause pause;
     
 
     Snared snare;

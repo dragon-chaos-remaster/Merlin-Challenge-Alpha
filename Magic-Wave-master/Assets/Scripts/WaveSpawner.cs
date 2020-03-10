@@ -9,9 +9,9 @@ public class WaveSpawner : MonoBehaviour
 
     public Pooling[] pooledObjects;
 
-    public TimeManager tempo;
+    [SerializeField] TimeManager tempo;
 
-    public Pause pauses;
+    [SerializeField] Pause pauses;
     //Referência ao Golpe do vilão DIO BRANDO, de Jojo's Bizarre Adventures: Stardust Crusaders, onde ele para o Tempo 
     bool zaWarudo = true;
     //KONO DIO DA

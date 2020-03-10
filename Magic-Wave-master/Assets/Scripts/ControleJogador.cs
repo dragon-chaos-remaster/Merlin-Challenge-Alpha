@@ -20,6 +20,13 @@ public class ControleJogador : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        movimento = new Vector3((Input.GetAxisRaw("Vertical")), 0f, -(Input.GetAxisRaw("Horizontal")));
+        movimento = movimento.normalized * speed;
+        fisica.velocity = movimento;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -37,9 +44,9 @@ public class ControleJogador : MonoBehaviour
         //Apenas inverti os valores do movimento baseado no Angulo da Camera, se preferir que a camera fique do jeito Original, basta retirar as 2 barrinhas "//" da linha abaixo e apagar a linha invertida
 
         //movimento = new Vector3((Input.GetAxisRaw("Horizontal")), 0f , (Input.GetAxisRaw("Vertical")));
-        movimento = new Vector3((Input.GetAxisRaw("Vertical")), 0f, -(Input.GetAxisRaw("Horizontal")));
-        movimento = movimento.normalized * speed * Time.deltaTime;
-        fisica.MovePosition(transform.position + movimento);
+        //movimento = new Vector3((Input.GetAxisRaw("Vertical")), 0f, -(Input.GetAxisRaw("Horizontal")));
+        //movimento = movimento.normalized * speed * Time.fixedDeltaTime;
+        //fisica.MovePosition(transform.position + movimento);
 
     }
 }
