@@ -162,7 +162,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 4
+  m_Speed: 6
   m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -210,6 +210,8 @@ MonoBehaviour:
   dNaoSei: 10
   dAtaqueBasico: 5
   dFogoArea: 5
+  dano: {fileID: 6117188299263344147}
+  pause: {fileID: 0}
   duracaoSnare: 2
 --- !u!114 &6117188299263344147
 MonoBehaviour:
