@@ -19,11 +19,14 @@ public class WaveSpawner : MonoBehaviour
     //public bool apenasAtiradores;
     //public bool apenasMelees;
 
+    //[SerializeField] CameraChange whenCameraChanges;
+
     [System.Serializable]
     public class Wave
     {
         public bool apenasAtiradores;
         public bool apenasMelees;
+        //public bool[] estaNaIlha;
         public string nome;
         public Transform[] inimigo;
         public int quantidade;
@@ -32,11 +35,21 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
 
+    //[SerializeField] Dictionary<int, Transform[]> transforms = new Dictionary<int, Transform[]>();
+
     public Transform[] spawnPoints;
 
     public TextMeshProUGUI[] contagemRegressiva;
 
-    
+    #region SINGLETON
+    static WaveSpawner instance;
+    public static WaveSpawner Instance { get { return instance; } }
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+    //[SerializeField] GameObject player;
 
     int waveCountPointer;
     private int proximaWave = 0;
@@ -53,7 +66,10 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.LogError("ERRO: Não foi encontrado nenhum Ponto de Spawn dos Inimigos na Cena. FAVOR COLOCAR: " + spawnPoints.Length + " PARA A CENA");
         }
+       
 
+        //transforms.Add(whenCameraChanges.nIlha, spawnPoints);
+        
         contadorDaWave = tempoEntreWaves;
 
     }
@@ -176,6 +192,7 @@ public class WaveSpawner : MonoBehaviour
         
         
     }
+    
     public void SetEnemyToSpawn(GameObject enemy)
     {
         if (enemy != null)

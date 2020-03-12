@@ -10,13 +10,23 @@ public class CameraChange : MonoBehaviour
 
     [SerializeField] int nIlha;
 
+    //[SerializeField] string nomeDaIlha;
 
+   // [SerializeField] WaveSpawner pontosDeSpawn;
+
+   // [SerializeField] List<GameObject> ilhas = new List<GameObject>();
+    
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("player"))
         {
             camerasAnimator.SetInteger("nIlha", nIlha);
-
+            /*for (int i = 0; i < pontosDeSpawn.spawnPoints.Length; i++)
+            {
+                pontosDeSpawn.spawnPoints[i].position = ilhas[nIlha].transform.position + (Vector3.forward * 10);
+            }*/
+            
             //camerasAnimator.SetBool("trocarDeIlha", trocarIlha);
             //StartCoroutine(TempoPraTrocar());
         }

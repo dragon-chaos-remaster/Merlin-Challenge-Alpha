@@ -8,7 +8,7 @@ public class ControleJogador : MonoBehaviour
     RaycastHit hit;
     Vector3 movimento;
 
-
+    [SerializeField] string pisandoEmQueIlha;
 
 
 
@@ -27,6 +27,16 @@ public class ControleJogador : MonoBehaviour
         fisica.velocity = movimento;
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == pisandoEmQueIlha)
+        {
+            for (int i = 0; i < WaveSpawner.Instance.spawnPoints.Length; i++)
+            {
+                WaveSpawner.Instance.spawnPoints[i].position = transform.forward * 10;
+            }
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
